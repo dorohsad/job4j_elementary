@@ -6,11 +6,11 @@ import static org.junit.Assert.assertEquals;
 
 public class FindLoopTest {
     @Test
-    public void whenArrayHasLength5Then0() {
-        int[] data = new int[] {5, 10, 3};
+    public void whenArrayHasLength0ThenMinus1() {
+        int[] data = new int[0];
         int el = 5;
         int result = FindLoop.indexOf(data, el);
-        int expected = 0;
+        int expected = -1;
         assertEquals(expected, result);
     }
 
