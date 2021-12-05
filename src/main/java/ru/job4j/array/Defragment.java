@@ -2,7 +2,6 @@ package ru.job4j.array;
 
 public class Defragment {
     public static String[] compress(String[] array) {
-        outer:
         for (int index = 0; index < array.length; index++) {
             if (array[index] == null) {
                 for (int i = index + 1; i < array.length; i++) {
@@ -10,8 +9,6 @@ public class Defragment {
                         array[index] = array[i];
                         array[i] = null;
                         break;
-                    } else if (i == array.length - 1) {
-                        break outer;
                     }
                 }
             }
