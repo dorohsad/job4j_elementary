@@ -32,4 +32,22 @@ public class PointTest {
         double out = a.distance(b);
         assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void whenAllZeroAndOneAndTwoZeroThenOne() {
+        double expected = 1;
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(1, 0, 0);
+        double out = a.distance3d(b);
+        assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void whenAllFourAndAllZeroThenSixPointNineThree() {
+        double expected = 6.93;
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(4, 4, 4);
+        double out = a.distance3d(b);
+        assertEquals(expected, out, 0.01);
+    }
 }
